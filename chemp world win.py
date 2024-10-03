@@ -5,6 +5,7 @@ from operator import itemgetter, attrgetter
 
 
 def sampling_algorithm_e(gruppa_e, result_e_power_random, place_result_e):
+    #combinations matches(Grmany,Spain)
     played_matches_e = list(itertools.combinations(gruppa_e, 2))
     for matches_e in played_matches_e:
         #here we used a variables below as iteration variable for next manipulations on line 75
@@ -15,7 +16,7 @@ def sampling_algorithm_e(gruppa_e, result_e_power_random, place_result_e):
             result_e_power_random[command_e_1] += 3
         else:
             result_e_power_random[command_e_2] += 3
-
+#string of code for applying places from 1
     power_commands_e = dict(reversed(sorted(result_e_power_random.items(), key=lambda match_e: match_e[1])))
     min_place_e = 1
     for place in enumerate(power_commands_e):
@@ -31,6 +32,8 @@ def sampling_algorithm_e(gruppa_e, result_e_power_random, place_result_e):
 
 
 def sampling_algorithm_d(gruppa_d, result_place_commands):
+    # same code as before
+    error in cf
     played_matches = list(itertools.combinations(gruppa_d, 2))
     for match in played_matches:
         first_team, second_team = match
